@@ -2,7 +2,10 @@
 <html>
 <head>
   <title>brownies on Etsy, a global handmade and vintage marketplace</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/vendor/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -10,9 +13,7 @@
 
   <div class="container">
 
-    <div class="margin" id="left"></div>
-    <div class="margin" id="right"></div>
-
+    <!-- Header -->
     <header>
       <img src="images/Etsy_logo.png">
       <div class="searchcontainer">
@@ -27,33 +28,118 @@
       <button>Sign In</button>
 
       <button class="cartcontainer">
-        <img src="">
+        <img src="images/cart.png">
         <span>Cart</span>
       </button>
-
     </header>
 
 
+    <!-- Nav sidebar -->
+
+    <nav>
+      <!-- Show results -->
+      <span>Show results for:</span>
+      <div class="allCategories">
+        <span>All Categories</span>
+        <ul>
+          <li><a href="#">Home &amp; Living</a></li>
+          <li><a href="#">Art &amp; Collectibles</a></li>
+          <li><a href="#">Electronics &amp; Accessories</a></li>
+          <li><a href="#">Craft Supplies &amp; Tools</a></li>
+          <li><a href="#">Paper &amp; Party Supplies</a></li>
+          <li><a href="#">Jewelry</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Bath &amp; Beauty</a></li>
+          <li><a href="#">Toys &amp; Games</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Books, Movies &amp; Music</a></li>
+          <li><a href="#">Bags &amp; Purses</a></li>
+          <li><a href="#">Weddings</a></li>
+          <li><a href="#">Pet Supplies</a></li>
+        </ul>
+      </div>
+
+      <!-- Refine your search -->
+      <span>Refine your search</span>
+      <div class="refinesearch">
+        <span>Item Type</span>
+        <form action="">
+        <input type="radio" name="itemType" value="allItems" checked>All Items<br>
+        <input type="radio" name="itemType" value="Handmade">Handmade<br>
+        <input type="radio" name="itemType" value="Vintage">Vintage<br>
+        </form>
+        <hr>
+
+        <span>Price</span>
+        <div class="input-box">
+          <input value="" name="lowPrice" input="Type here" placeholder="Low"/>
+          <span class="unit">$</span>
+        </div>
+
+        <span>to</span>
+        <div class="input-box">
+          <input value="" name="highPrice" input="Type here"/ placeholder="High">
+          <span class="unit">$</span>
+        </div>
+
+        <button>Go</button>
+        <hr>
+
+        <span>Filter by Color</span>
+        <a href="#"><div class="color" id="red"></div></a>
+        <a href="#"><div class="color" id="orange"></div></a>
+        <a href="#"><div class="color" id="yellow"></div></a>
+        <a href="#"><div class="color" id="green"></div></a>
+        <a href="#"><div class="color" id="blue"></div></a>
+        <a href="#"><div class="color" id="purple"></div></a>
+        <a href="#"><div class="color" id="black"></div></a>
+        <a href="#"><div class="color" id="white"></div></a>
+        <hr>
+
+        <form name="orderingOptions" action="">
+          <span>Ordering Options</span>
+          <input type="checkbox" name="orderOption" value="acceptGiftCards"><a href="#">Accepts Etsy Gift Cards</a><br>
+          <input type="checkbox" name="orderOption" value="Customizable"><a href="#">Customizable</a>
+        </form>
+        <hr>
+
+        <span>Shop Location</span>
+        <form action="">
+        <input type="radio" name="shopLocation" value="anywhere" checked>Anywhere<br>
+        <input type="radio" name="shopLocation" value="unitedStates">United States<br>
+        <a href="#">Choose a custom location</a>
+        </form>
+        <hr>
+
+        <span>Ship To</span>
+        <select>
+          <option value="uganda">Uganda</option>
+          <option value="ukraine">Ukraine</option>
+          <option value="unitedArabEmirates">United Arab Emirates</option>
+          <option value="unitedKingdom">United Kingdom</option>
+          <option value="unitedStates" selected>United States</option>
+          <option value="usMinor">United States Minor Outlying Islands</option>
+          <option value="uruguay">Uruguay</option>
+          <option value="usVirgin">U.S. Virgin Islands</option>
+        </select>
+      </div>
+    </nav>
+
+    <!-- Search Results -->
+
+    <div class="searchResults">
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+    </div>
 
   </div>
 
 
 
-
+  <!-- Scripts -->
 
   <script src="scripts/vendor/jquery.min.js"></script>
   <script src="scripts/brownies.js"></script>

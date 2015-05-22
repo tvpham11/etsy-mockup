@@ -1,12 +1,19 @@
-.margin {
-  width: 11.6%;
-  height: 100%;
+nav {
+  float: left;
 
-  #left {
-    float: left;
+  ul {
+    list-style-type: none;
   }
 
-  #right {
-    float: right;
+  a {
+    text-decoration: none;
+
+  .color {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid gray;
+    display: inline-block;
+  }
   }
 }
