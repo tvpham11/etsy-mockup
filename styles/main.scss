@@ -1,12 +1,95 @@
+@import "styles/vendor/bourbon/bourbon";
+@import "styles/vendor/neat/neat";
+
+$turq: #39A4BE;
+$grey: #B2B2B2;
+$greybackground: #F5F5F1;
+$navborder: #E1E3DF;
+
+@mixin navboxes() {
+  border: 2px solid $navborder;
+  border-radius: 2px;
+  background-color: white;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $greybackground;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  height: 75px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 10px rgba (176,176,176,1);
+}
+
+.leftside {
+  float: left;
+  display: block;
+  margin-left: 11.7%;
+
+    img {
+    width: 75px;
+    display: inline-block;
+    }
+
+    .searchcontainer {
+    display: inline-block;
+
+    .searchcontainer form {
+        display: inline-block;
+      }
+
+    .search {
+        background-color: $turq;
+    }
+  }
+}
+
+.rightside {
+  float: right;
+  display: inline-block;
+  margin-right: 11.7%;
+}
+
+
+.container {
+  width: 76.5%;
+  margin: 0 auto;
+  @include outer-container;
+}
+
 nav {
   float: left;
+  @include span-columns(3);
 
   ul {
     list-style-type: none;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  li {
+    list-style: none;
   }
 
   a {
     text-decoration: none;
+    color: $turq;
+  }
+
+  .allCategories {
+    @include navboxes();
+  }
+
+  .refineSearch {
+    @include navboxes();
+  }
 
   .color {
     width: 15px;
@@ -15,5 +98,20 @@ nav {
     border: 1px solid gray;
     display: inline-block;
   }
+}
+
+.searchResults {
+
+  .gridResults {
+    @include span-columns(7);
+  }
+
+  .item {
+    width: 50px;
+    height: 150px;
+    background-color: red;
+    // @include span-columns(4);
+    // @include omega(3n);
+    // margin-bottom: 10px;
   }
 }
