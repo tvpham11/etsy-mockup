@@ -1,52 +1,137 @@
-@import "styles/vendor/bourbon/bourbon";
-@import "styles/vendor/neat/neat";
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
 
 $turq: #39A4BE;
+$searchturqhover: #44A9C1;
 $grey: #B2B2B2;
+$darkgrey: #555555;
+$headerdarkgrey: #746666;
 $greybackground: #F5F5F1;
 $navborder: #E1E3DF;
 
 @mixin navboxes() {
-  border: 2px solid $navborder;
-  border-radius: 2px;
+  border: 1.5px solid $navborder;
   background-color: white;
+}
+
+@mixin borderrad() {
+  border-radius: 2px;
+}
+
+@mixin centerelements() {
+  width: 980px;
+  margin: 0 auto;
+}
+
+@mixin colorfilter() {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid #CBCCC9;
+  display: inline-block;
+}
+
+@mixin navHead() {
+  margin-left: 5px;
+  color: $darkgrey;
+  font-weight: 800;
+}
+
+@mixin navButtons() {
+  height: 35px;
+  font-size: 1.1em;
 }
 
 body {
   box-sizing: border-box;
   background-color: $greybackground;
-  font-family: Arial,sans-serif;
-  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
   line-height: 1.4;
 }
 
 header {
   width: 100%;
   background-color: white;
-  height: 75px;
+  height: 80px;
   margin-bottom: 25px;
   box-shadow: 0px 0px 10px rgba (176,176,176,1);
+
+  .headerelements {
+    @include centerelements();
+  }
 }
 
 .leftside {
   float: left;
-  display: block;
+  display: inline-block;
   margin-left: 11.7%;
+  position: relative;
 
-    img {
-    width: 75px;
+  img {
+    width: 90px;
+    float: left;
+    padding-top: 15px;
+    margin-right: 15px;
+  }
+
+  .searchwrapper {
     display: inline-block;
+    position: relative;
+    height: 35px;
+    width: 330px;
+    @include borderrad();
+    margin-top: 20px;
+
+    .searchfield {
+      display: inline-block;
+      line-height: normal;
+      height: 35px;
+      width: 250px;
+      font-size: 1em;
+      padding-left: 5px;
     }
 
-    .searchcontainer {
+    .searchbtn {
+      position: absolute;
+      background-color: $turq;
+      border: none;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: white;
+      font-weight: 600;
+      @include navButtons();
+      @include borderrad();
+    }
+
+    .searchbtn:hover {
+      background-color: $searchturqhover;
+    }
+  }
+
+  .browsebtn {
+    position: relative;
     display: inline-block;
 
-    .searchcontainer form {
-        display: inline-block;
-      }
+    .browse {
+      position: relative;
+      width: 78px;
+      color: $headerdarkgrey;
+      font-weight: 500;
+      padding-left: 0px;
+      margin-left: 10px;
+      background-color: white;
+      border: 1px solid $grey;
+      @include navButtons();
+      @include borderrad();
+    }
 
-    .search {
-        background-color: $turq;
+    .browse:after {
+      content: "▾";
+      position: absolute;
+      color: $grey;
+      top: 7px;
+      right: 3px;
     }
   }
 }
@@ -55,18 +140,56 @@ header {
   float: right;
   display: inline-block;
   margin-right: 11.7%;
+
+  a {
+    text-decoration: none;
+    color: $turq;
+    font-size: 1.1em;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .signin {
+    border: 1px solid $turq;
+    color: $turq;
+    background-color: white;
+    @include navButtons();
+    @include borderrad();
+  }
+
+  .cartcontainer {
+    border: none;
+    border-left: 1px solid $grey;
+    background-color: white;
+    margin-top: 10px;
+  }
+
+  .cartcontainer img {
+    display: block;
+    color: $darkgrey;
+  }
+
+  .cartcontainer span {
+    display: block;
+    color: $darkgrey;
+  }
+
 }
 
-
-.container {
-  width: 76.5%;
-  margin: 0 auto;
+.itemArea {
+  @include centerelements();
   @include outer-container;
 }
 
 nav {
   float: left;
-  @include span-columns(3);
+  @include span-columns(4);
+
+  .navheader {
+    @include navHead();
+  }
 
   ul {
     list-style-type: none;
@@ -85,33 +208,91 @@ nav {
 
   .allCategories {
     @include navboxes();
+    @include borderrad();
   }
 
   .refineSearch {
     @include navboxes();
+    @include borderrad();
   }
 
-  .color {
-    width: 15px;
-    height: 15px;
-    border-radius: 2px;
-    border: 1px solid gray;
-    display: inline-block;
+  #colorfilt {
+    display: block;
+  }
+
+  .colors {
+    margin-top: 3px;
+    margin-left: 5px;
+  }
+
+  .red {
+    @include colorfilter();
+    background-color: red;
+  }
+
+  .orange {
+    @include colorfilter();
+    background-color: orange;
+  }
+
+  .yellow {
+    @include colorfilter();
+    background-color: yellow;
+  }
+
+  .green {
+    @include colorfilter();
+    background-color: green;
+  }
+
+  .blue  {
+    @include colorfilter();
+    background-color: blue;
+  }
+
+  .purple {
+    @include colorfilter();
+    background-color: purple;
+  }
+
+  .black {
+    @include colorfilter();
+    background-color: black;
+  }
+
+  .white {
+    @include colorfilter();
+    background-color: white;
   }
 }
 
 .searchResults {
+  float: left;
+  @include span-columns(7);
 
-  .gridResults {
-    @include span-columns(7);
+  a {
+    color: $turq;
+    text-decoration: none;
   }
 
-  .item {
-    width: 50px;
-    height: 150px;
-    background-color: red;
-    // @include span-columns(4);
-    // @include omega(3n);
-    // margin-bottom: 10px;
+  .browniesResults {
+    font-weight: 600;
   }
 }
+
+.gridResults {
+
+    .item {
+      float: left;
+      position: relative;
+    }
+
+    .itemHolder {
+      width: 225px;
+      height: 220px;
+      background-color: red;
+      border: black;
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }

@@ -13,37 +13,42 @@
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="leftside">
-      <img src="images/Etsy_logo.png">
-      <div class="searchcontainer">
-        <form input="text" name="searchterm" value="brownies">brownies</form>
-        <button class="search">Search</button>
-        <button class="browse">Browse</button>
-      </div>
-    </div>
-
-    <div class="rightside">
-      <a href="#">Register</a>
-      <button>Sign In</button>
-      <button class="cartcontainer">
-        <img src="images/cart.png">
-        <span>Cart</span>
-      </button>
-    </div>
-  </header>
-
-
   <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="headerelements">
+        <div class="leftside">
+          <img src="images/Etsy_logo.png">
+          <div class="searchwrapper">
+          <form action="#">
+            <input class="searchfield" type="text" name="searchterm" placeholder="Search for items or shops">
+            <input class="searchbtn" type="submit" value="Search">
+          </form>
+          </div>
+          <div class="browsebtn">
+            <button class="browse">Browse</button>
+          </div>
+        </div>
 
-  <!-- Nav sidebar -->
+        <div class="rightside">
+          <a href="#">Register</a>
+          <button class="signin">Sign In</button>
+          <button class="cartcontainer">
+            <img src="images/cart.png">
+            <span>Cart</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
     <div class="itemArea">
+
+      <!-- Nav sidebar -->
       <nav>
         <!-- Show results -->
-        <span>Show results for:</span>
+        <span class="navheader">Show results for:</span>
         <div class="allCategories">
-          <span>All Categories</span>
+          <span class="navheader">All Categories</span>
           <ul>
             <li><a href="#">Home &amp; Living</a></li>
             <li><a href="#">Art &amp; Collectibles</a></li>
@@ -63,7 +68,7 @@
         </div>
 
         <!-- Refine your search -->
-        <span>Refine your search</span>
+        <span class="navheader">Refine your search</span>
         <div class="refineSearch">
           <span>Item Type</span>
           <form action="">
@@ -73,7 +78,7 @@
           </form>
           <hr>
 
-          <span>Price</span>
+          <span class="navheader">Price</span>
           <div class="input-box">
             <input value="" name="lowPrice" input="Type here" placeholder="Low"/>
             <span class="unit">$</span>
@@ -88,25 +93,27 @@
           <button>Go</button>
           <hr>
 
-          <span>Filter by Color</span>
-          <a href="#"><div class="color" id="red"></div></a>
-          <a href="#"><div class="color" id="orange"></div></a>
-          <a href="#"><div class="color" id="yellow"></div></a>
-          <a href="#"><div class="color" id="green"></div></a>
-          <a href="#"><div class="color" id="blue"></div></a>
-          <a href="#"><div class="color" id="purple"></div></a>
-          <a href="#"><div class="color" id="black"></div></a>
-          <a href="#"><div class="color" id="white"></div></a>
+          <span class="navheader" id="colorfilt">Filter by Color</span>
+          <div class="colors">
+            <a href="#" class="red"></a>
+            <a href="#" class="orange"></a>
+            <a href="#" class="yellow"></a>
+            <a href="#" class="green"></a>
+            <a href="#" class="blue"></a>
+            <a href="#" class="purple"></a>
+            <a href="#" class="black"></a>
+            <a href="#" class="white"></a>
+          </div>
           <hr>
 
           <form name="orderingOptions" action="">
-            <span>Ordering Options</span>
+            <span class="navheader">Ordering Options</span>
             <input type="checkbox" name="orderOption" value="acceptGiftCards"><a href="#">Accepts Etsy Gift Cards</a><br>
             <input type="checkbox" name="orderOption" value="Customizable"><a href="#">Customizable</a>
           </form>
           <hr>
 
-          <span>Shop Location</span>
+          <span class="navheader">Shop Location</span>
           <form action="">
           <a href="#"><input type="radio" name="shopLocation" value="anywhere" checked>Anywhere</a><br>
           <a href="#"><input type="radio" name="shopLocation" value="unitedStates">United States</a><br>
@@ -114,7 +121,7 @@
           </form>
           <hr>
 
-          <span>Ship To</span>
+          <span class="navheader">Ship To</span>
           <select>
             <option value="uganda">Uganda</option>
             <option value="ukraine">Ukraine</option>

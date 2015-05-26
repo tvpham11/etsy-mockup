@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  box-sizing: border-box;
+  background-color: #F5F5F1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4; }
+
+.container {
+  width: 100%; }
+
+header {
+  width: 100%;
+  background-color: white;
+  height: 75px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 10px rgba 176, 176, 176, 1; }
+
+.leftside {
+  float: left;
+  display: inline-block;
+  margin-left: 11.7%; }
+  .leftside img {
+    width: 90px; }
+  .leftside form {
+    display: inline-block; }
+    .leftside form input {
+      display: inline-block;
+      line-height: normal;
+      height: 34px;
+      width: 250px;
+      font-size: 1em;
+      padding-left: 5px; }
+    .leftside form .search {
+      background-color: #39A4BE;
+      display: inline-block; }
+
+.rightside {
+  float: right;
+  display: inline-block;
+  margin-right: 11.7%; }
+
+.itemArea {
+  width: 76.5%;
+  margin: 0 auto;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .itemArea::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+nav {
+  float: left;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  nav:last-child {
+    margin-right: 0; }
+  nav ul {
+    list-style-type: none;
+    border-radius: 5px;
+    padding: 15px; }
+  nav li {
+    list-style: none; }
+  nav a {
+    text-decoration: none;
+    color: #39A4BE; }
+  nav .allCategories {
+    border: 1px solid #E1E3DF;
+    border-radius: 2px;
+    background-color: white; }
+  nav .refineSearch {
+    border: 1px solid #E1E3DF;
+    border-radius: 2px;
+    background-color: white; }
+  nav .color {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid gray; }
+    nav .color #red {
+      background-color: red; }
+    nav .color #orange {
+      background-color: orange; }
+    nav .color #yellow {
+      background-color: yellow; }
+    nav .color #green {
+      background-color: green; }
+    nav .color #blue {
+      background-color: blue; }
+    nav .color #purple {
+      background-color: purple; }
+    nav .color #black {
+      background-color: black; }
+    nav .color #white {
+      background-color: white; }
+
+.searchResults a {
+  color: #39A4BE;
+  text-decoration: none; }
+
+.searchResults .gridResults {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%; }
+  .searchResults .gridResults:last-child {
+    margin-right: 0; }
+  .searchResults .gridResults .item {
+    width: 200px;
+    height: 150px; }

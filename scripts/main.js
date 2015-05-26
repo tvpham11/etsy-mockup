@@ -8,12 +8,12 @@ var itemImage,
 brownies.results.forEach (function (item) {
 
 
-  itemImage = '<img src="' + item.Images[0].url_170x135 + '">';
-  itemTitle = '<p>' + item.title + '</p>';
-  itemShopName = '<p><a href="#">' + item.Shop.shop_name + '</a></p>'
-  itemPrice = '<p>' + item.price + '</p>'
+  itemImage = '<a href="#"><img class="brownieimg" src="' + item.Images[0].url_170x135 + '"></a>';
+  itemTitle = '<p class="browniename">' + item.title + '</p>';
+  itemShopName = '<p class="brownieseller"><a href="#">' + item.Shop.shop_name + '</a></p>'
+  itemPrice = '<p class="brownieprice">' + item.price + '</p>'
 
-  itemHolder = '<div>' + itemImage + itemTitle + itemShopName + itemPrice +'</div>'
+  itemHolder = '<div class="itemHolder">' + itemImage + itemTitle + itemShopName + itemPrice +'</div>'
 
   itemList.append(itemHolder);
 
