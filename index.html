@@ -43,8 +43,8 @@
 
     <div class="itemArea">
 
-      <!-- Nav sidebar -->
-      <nav>
+      <!-- Sidebar -->
+      <aside>
         <!-- Show results -->
         <span class="navheader">Show results for:</span>
         <div class="allCategories">
@@ -133,25 +133,58 @@
             <option value="usVirgin">U.S. Virgin Islands</option>
           </select>
         </div>
-      </nav>
-
+      </aside>
     <!-- Search Results -->
 
-    <div class="searchResults">
-      <a href="#">All Categories</a><span class="browniesResults"> > "brownies</span><span> (7,211 Results)</span>
-      <span>Sort By: </span>
-      <select>
-        <a href="#"><option value="unitedKingdom">Most Recent</option></a>
-        <a href="#"><option value="unitedStates" selected>Relevancy</option></a>
-        <a href="#"><option value="usMinor">Highest Price</option></a>
-        <a href="#"><option value="uruguay">Lowest Price</option></a>
-      </select>
-    </div>
+      <div class="resultsSection">
 
-    <div class="gridResults">
-      <div class="item"></div>
-    </div>
+        <div class="searchResults">
+          <a href="#">All Categories</a><span class="browniesResults"> > "brownies</span><span> (7,211 Results)</span>
+          <span>Sort By: </span>
+          <select>
+            <a href="#"><option value="mostrecent">Most Recent</option></a>
+            <a href="#"><option value="relevancy" selected>Relevancy</option></a>
+            <a href="#"><option value="highestprice">Highest Price</option></a>
+            <a href="#"><option value="lowestprice">Lowest Price</option></a>
+          </select>
+        </div>
 
+        <div class="gridResults">
+          <div class="item"></div>
+        </div>
+
+        <div class="relatedTo">
+          <h5>"Related to "<strong>brownies</strong></h5>
+          <a href="#">cookies</a>
+          <a href="#">baked goods</a>
+          <a href="#">cupcakes</a>
+          <a href="#">food</a>
+
+          <span>Looking for shops?</span>
+          <a href="#">BrowniesWoodcrafts</a>,
+          <a href="#">BROWNIESBOWTIQUE</a>,
+          <a href="#">fudgybrownies</a>.
+          <a href="#">See more</a>.
+        </div>
+
+        <div class="pagination">
+          <ul class="cd-pagination no-space">
+            <li class="button"><a href="#">&lt;</a></li>
+            <li><a class="current" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><span>...</span></li>
+            <li><a href="#">169</a></li>
+            <li class="button"><a href="#">&gt;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Scripts -->
