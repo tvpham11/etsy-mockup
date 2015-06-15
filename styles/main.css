@@ -158,7 +158,8 @@ aside:last-child {
   margin-right: 0; }
 
 aside .allCategories {
-  padding: 0 7px 12px 7px; }
+  padding: 0 7px 12px 7px;
+  margin-bottom: 15px; }
 
 aside .navheader {
   margin-left: 5px;
@@ -188,7 +189,13 @@ aside .allCategories {
 aside .refineSearch {
   border: 1.5px solid #E1E3DF;
   background-color: white;
-  border-radius: 5px; }
+  border-radius: 5px;
+  padding: 0 7px 12px 7px;
+  margin-bottom: 15px; }
+
+aside .refineSearch input {
+  color: #555555;
+  font-weight: 800; }
 
 aside #colorfilt {
   display: block; }

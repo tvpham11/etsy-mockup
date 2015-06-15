@@ -43,6 +43,11 @@ $navborder: #E1E3DF;
   font-size: 1.1em;
 }
 
+@mixin asidePadMarg {
+  padding: 0 7px 12px 7px;
+  margin-bottom: 15px;
+}
+
 @mixin textTruncate() {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -212,7 +217,7 @@ aside {
   @include span-columns(3);
 
   .allCategories {
-    padding: 0 7px 12px 7px;
+    @include asidePadMarg();
   }
 
   .navheader {
@@ -245,6 +250,12 @@ aside {
   .refineSearch {
     @include navboxes();
     @include borderrad();
+    @include asidePadMarg();
+  }
+
+  .refineSearch input {
+    color: $darkgrey;
+    font-weight: 800;
   }
 
   #colorfilt {
