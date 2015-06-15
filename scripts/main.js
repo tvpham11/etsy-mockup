@@ -5,8 +5,8 @@ var itemImage,
     itemPrice,
     itemHolder;
 
-var hamburger = '<a href="#"><img class="hamburg" src="images/hamburger.png"></a>';
 var heart = '<a href="#"><img class="heart" src="images/heart.png"></a>';
+var hamburger = '<a href="#"><img class="hamburg" src="images/hamburger.png"></a>';
 
 brownies.results.forEach (function (item) {
 
@@ -16,7 +16,7 @@ brownies.results.forEach (function (item) {
   itemPrice = '<p class="brownieprice"> $' + item.price + ' ' + item.currency_code + '</p>'
 
   itemHolder = '<div class="itemHolder">' + itemImage + '<div class ="itemInfo">' + itemTitle +
-                itemShopName + itemPrice + '</div>' + hamburger + heart + '</div>'
+                itemShopName + itemPrice + '</div>' + '<div class="hovericons">' + heart + hamburger + '</div></div>'
 
   itemList.append(itemHolder);
 

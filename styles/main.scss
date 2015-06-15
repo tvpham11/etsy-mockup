@@ -1,9 +1,9 @@
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
 
-$turq: #0192B5;
+$turq: #3EA9C3;
 $searchturqhover: #34A8C4;
-$grey: #B2B2B2;
+$grey: #EEEEEE;
 $itemItemgrey: #555;
 $darkgrey: #555555;
 $headerdarkgrey: #746666;
@@ -53,7 +53,7 @@ body {
   box-sizing: border-box;
   background-color: $greybackground;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.875em;
+  font-size: 13px;
   line-height: 1.4;
 }
 
@@ -72,14 +72,14 @@ header {
 .leftside {
   float: left;
   display: inline-block;
-  margin-left: 11.7%;
   position: relative;
 
   img {
     width: 100px;
     float: left;
-    padding-top: 15px;
+    padding-top: 12px;
     margin-right: 15px;
+    // margin-bottom: 50px;
   }
 
   .searchwrapper {
@@ -94,11 +94,19 @@ header {
       display: inline-block;
       line-height: normal;
       height: 34px;
-      width: 229px;
+      width: 253px;
       font-size: 1em;
       padding-left: 5px;
       background-color: #FBFBFA;
       outline: 0;
+      border: 1px solid #bdbdbd;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      &:hover {
+        background-color: white;
+        border: 1px solid #2AA490;
+      }
     }
 
     .searchbtn {
@@ -117,7 +125,9 @@ header {
       color: #FFF;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
       @include navButtons();
-      // @include borderrad();
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      clear: right;
     }
 
     .searchbtn:hover {
@@ -135,7 +145,7 @@ header {
       color: $headerdarkgrey;
       font-weight: 500;
       padding-left: 0px;
-      margin-left: 10px;
+      margin-left: 37px;
       background-color: white;
       border: 1px solid $grey;
       @include navButtons();
@@ -155,7 +165,6 @@ header {
 .rightside {
   float: right;
   display: inline-block;
-  margin-right: 11.7%;
 
   a {
     text-decoration: none;
@@ -184,8 +193,8 @@ header {
 
   .cartcontainer img {
     display: block;
-    // -webkit-filter: grayscale(50%);
     -webkit-mask-image:-webkit-linear-gradient(top, rgba(0, 0, 0,.4), rgba(0, 0, 0,.4));
+    width: 22px;
   }
 
   .cartcontainer span {
@@ -197,24 +206,30 @@ header {
 
 .itemArea {
   @include centerelements();
-  @include outer-container;
 }
 
 aside {
   @include span-columns(3);
 
+  .allCategories {
+    padding: 0 7px 12px 7px;
+  }
+
   .navheader {
     @include navHead();
+    line-height: 3em;
   }
 
   ul {
     list-style-type: none;
     border-radius: 5px;
-    padding: 15px;
+    padding: 0;
+    margin: 0 24px;
   }
 
   li {
     list-style: none;
+    line-height: 1.8em;
   }
 
   a {
@@ -285,6 +300,15 @@ aside {
 .resultsSection {
   @include span-columns(9);
 
+  .resultsNo {
+    float: left;
+  }
+
+  .sort {
+    float: right;
+    text-align: right;
+  }
+
   a {
     color: $turq;
     text-decoration: none;
@@ -297,17 +321,23 @@ aside {
 
 .gridResults {
   display: block;
+  clear: left;
+  overflow: hidden;
 
   .itemHolder {
     width: 225px;
-    height: 220px;
+    // height: 220px;
     padding: 9px;
-    // background-color: red;
+    background-color: white;
     border: black;
     @include span-columns(4);
     @include omega(3n);
     position: relative;
     border-radius: 5px;
+
+    &:hover .hovericons {
+      display: block;
+    }
   }
 
   .adIcon {
@@ -324,6 +354,22 @@ aside {
     min-width: 18px;
     padding: 4px 6px;
     text-align: center;
+  }
+
+  .hovericons {
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    display: none;
+  }
+
+  .heart {
+    float: left;
+    padding: 0;
+    width: 26px;
+    line-height: 23px;
+    height: 25px;
+    background: #fff;
   }
 
   .browniename {
