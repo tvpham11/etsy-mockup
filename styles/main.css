@@ -105,7 +105,7 @@ header .headerelements {
 .leftside .browsebtn .browse:after {
   content: "▾";
   position: absolute;
-  color: #EEEEEE;
+  color: #555555;
   top: 7px;
   right: 3px; }
 
@@ -125,6 +125,7 @@ header .headerelements {
   border: 1px solid #3EA9C3;
   color: #3EA9C3;
   background-color: white;
+  margin-right: 15px;
   height: 34px;
   font-size: 1.1em;
   border-radius: 5px; }
@@ -134,6 +135,12 @@ header .headerelements {
   border-left: 1px solid #EEEEEE;
   background-color: white;
   margin-top: 10px; }
+
+.rightside .cartcontainer:hover img {
+  -webkit-mask-image: -webkit-linear-gradient(top, black, black); }
+
+.rightside .cartcontainer:hover span {
+  color: black; }
 
 .rightside .cartcontainer img {
   display: block;
@@ -180,6 +187,9 @@ aside li {
 aside a {
   text-decoration: none;
   color: #3EA9C3; }
+
+aside a:hover {
+  text-decoration: underline; }
 
 aside .allCategories {
   border: 1.5px solid #E1E3DF;
@@ -280,12 +290,15 @@ aside .white {
 .resultsSection .resultsNo {
   float: left; }
 
+.resultsSection .allCatTitle {
+  color: #3EA9C3; }
+
 .resultsSection .sort {
   float: right;
   text-align: right; }
 
 .resultsSection a {
-  color: #3EA9C3;
+  color: black;
   text-decoration: none; }
 
 .resultsSection .browniesResults {
@@ -306,7 +319,9 @@ aside .white {
   margin-right: 2.35765%;
   width: 31.76157%;
   position: relative;
-  border-radius: 5px; }
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+  margin: 5px; }
 
 .gridResults .itemHolder:last-child {
   margin-right: 0; }
@@ -316,6 +331,9 @@ aside .white {
 
 .gridResults .itemHolder:nth-child(3n+1) {
   clear: left; }
+
+.gridResults .itemHolder:hover {
+  box-shadow: 1px 1px #EEEEEE; }
 
 .gridResults .itemHolder:hover .hovericons {
   display: block; }
@@ -341,13 +359,21 @@ aside .white {
   top: 2px;
   display: none; }
 
-.gridResults .heart {
+.gridResults .heart, .gridResults .hamburg {
   float: left;
-  padding: 0;
-  width: 26px;
+  padding: 3px;
+  width: 25px;
   line-height: 23px;
-  height: 25px;
-  background: #fff; }
+  background: #fff;
+  border-radius: 3px;
+  border: 2px solid #EEEEEE;
+  background-color: white; }
+
+.gridResults .hamburg {
+  position: relative; }
+
+.gridResults .brownieimg {
+  width: 100%; }
 
 .gridResults .browniename {
   color: #555;
@@ -357,8 +383,16 @@ aside .white {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
+.gridResults .sellerPrice {
+  overflow: hidden; }
+
+.gridResults .brownieseller {
+  display: inline-block;
+  float: left;
+  margin: 0; }
+
 .gridResults .brownieseller a {
-  color: #EEEEEE;
+  color: #888;
   padding-left: 0px;
   font-size: 12px;
   display: inline;
@@ -368,8 +402,8 @@ aside .white {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.relatedTo {
-  display: block; }
-
-.pagination {
-  display: block; }
+.gridResults .brownieprice {
+  color: #78c042;
+  float: right;
+  display: inline;
+  margin: 0; }

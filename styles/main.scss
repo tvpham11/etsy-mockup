@@ -84,7 +84,6 @@ header {
     float: left;
     padding-top: 12px;
     margin-right: 15px;
-    // margin-bottom: 50px;
   }
 
   .searchwrapper {
@@ -160,7 +159,7 @@ header {
     .browse:after {
       content: "▾";
       position: absolute;
-      color: $grey;
+      color: $darkgrey;
       top: 7px;
       right: 3px;
     }
@@ -185,6 +184,7 @@ header {
     border: 1px solid $turq;
     color: $turq;
     background-color: white;
+    margin-right: 15px;
     @include navButtons();
     @include borderrad();
   }
@@ -194,6 +194,14 @@ header {
     border-left: 1px solid $grey;
     background-color: white;
     margin-top: 10px;
+
+    &:hover img {
+      -webkit-mask-image:-webkit-linear-gradient(top, black, black);
+    }
+
+    &:hover span {
+      color: black;
+    }
   }
 
   .cartcontainer img {
@@ -223,6 +231,7 @@ aside {
   .navheader {
     @include navHead();
     line-height: 3em;
+
   }
 
   ul {
@@ -240,6 +249,10 @@ aside {
   a {
     text-decoration: none;
     color: $turq;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .allCategories {
@@ -315,13 +328,17 @@ aside {
     float: left;
   }
 
+  .allCatTitle {
+    color: $turq;
+  }
+
   .sort {
     float: right;
     text-align: right;
   }
 
   a {
-    color: $turq;
+    color: black;
     text-decoration: none;
   }
 
@@ -344,7 +361,13 @@ aside {
     @include span-columns(4);
     @include omega(3n);
     position: relative;
+    border: 2px solid $grey;
     border-radius: 5px;
+    margin: 5px;
+
+    &:hover {
+      box-shadow: 1px 1px $grey;
+    }
 
     &:hover .hovericons {
       display: block;
@@ -374,13 +397,23 @@ aside {
     display: none;
   }
 
-  .heart {
+  .heart, .hamburg {
     float: left;
-    padding: 0;
-    width: 26px;
+    padding: 3px;
+    width: 25px;
     line-height: 23px;
-    height: 25px;
     background: #fff;
+    border-radius: 3px;
+    border: 2px solid $grey;
+    background-color: white;
+  }
+
+  .hamburg {
+    position: relative;
+  }
+
+  .brownieimg {
+    width: 100%;
   }
 
   .browniename {
@@ -390,8 +423,18 @@ aside {
     @include textTruncate();
   }
 
+  .sellerPrice {
+    overflow: hidden;
+  }
+
+  .brownieseller {
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+
   .brownieseller a {
-    color: $grey;
+    color: #888;
     padding-left: 0px;
     font-size: 12px;
     display: inline;
@@ -399,12 +442,11 @@ aside {
     text-decoration: none;
     @include textTruncate();
   }
-}
 
-.relatedTo {
-  display: block;
-}
-
-.pagination {
-  display: block;
+  .brownieprice {
+    color: #78c042;
+    float: right;
+    display: inline;
+    margin: 0;
+  }
 }

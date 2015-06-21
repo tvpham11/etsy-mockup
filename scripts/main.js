@@ -15,8 +15,9 @@ brownies.results.forEach (function (item) {
   itemShopName = '<p class="brownieseller"><a href="#">' + item.Shop.shop_name + '</a></p>'
   itemPrice = '<p class="brownieprice"> $' + item.price + ' ' + item.currency_code + '</p>'
 
-  itemHolder = '<div class="itemHolder">' + itemImage + '<div class ="itemInfo">' + itemTitle +
-                itemShopName + itemPrice + '</div>' + '<div class="hovericons">' + heart + hamburger + '</div></div>'
+  itemHolder = '<div class="itemHolder">' + itemImage + '<div class ="itemInfo">' + itemTitle;
+  itemHolder += '<div class="sellerPrice">' + itemShopName + itemPrice + '</div></div>';
+  itemHolder += '<div class="hovericons">' + heart + hamburger + '</div></div>';
 
   itemList.append(itemHolder);
 
